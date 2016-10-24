@@ -1,0 +1,67 @@
+
+  <!-- <img ng-src="{{ vm.image }}" alt="" /> -->
+  <!-- <p ng-repeat="tea in vm.teas">
+    {{ tea.name }}
+  </p> -->
+
+<table class=bordered>
+  <tr>
+    <th>Name</th>
+    <th>Information</th>
+  </tr>
+  <tr ng-repeat="tea in vm.teas">
+    <td>
+      <img ng-src="{{ tea.imageUrl }}" alt="{{ tea.name }}" />
+    </td>
+    <td>
+      <div class="col s12">
+        <div class="row">
+          <div class="col s7">
+            <label for="tea_name">
+              <span name="tea_name">{{ tea.name }}</span>
+            </label>
+          </div>
+          <div class="col s5">
+            <label for="quantity">
+            <select name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <div class="btn-large">
+              Add to Bag
+            </div>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col s12">
+          <label>Ingredients:
+            <span>{{ tea.ingredients }}</span>
+          </label>
+        </div>
+      <div class="row">
+        <label>Price: $
+           <span>{{ tea.price*.01 }}</span>
+        </label>
+      </div>
+      <div class="row">
+        <label>Caffeine:
+           <span>{{ tea.caffeineScale }}</span>
+        </label>
+      </div>
+      <div class="row">
+        <label>Rating:
+           <span>{{ tea.rating }}</span>
+        </label>
+      </div>
+      <div class="row">
+        <label>Categories:
+           <span>{{ tea.categories }}</span>
+        </label>
+      </div>
+    </div>
+    </div>
+    </td>
+  </tr>
+</table>

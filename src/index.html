@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="teaApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Mean Teas</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="container">
+        <nav>
+          <div class="col s12">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Welcome to Mean Teas!</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">About</a></li>
+                  <li><a href="">contact</a></li>
+              </ul>
+          </div>
+        </div>
+        </nav>
+      <main>
+        <div class="row">
+          <div class="col s4">
+            <input ng-model="searchText" type="text" placeholder="Search here">
+          </div>
+          <div class="col s5">
+            <label for="selectCaegories">Materialize Selected</label>
+            <select name="selectCategories">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+          <div class="col s3">
+            <span>
+              <a class="btn-large" disabled>
+                <span><i class="small material-icons">shopping_cart</i></span>
+                <span> | 0 </span>
+            </a>
+          </div>
+        </div>
+      </main>
+      <section>
+        <tea-Catalog></tea-Catalog>
+      </section>
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+
+    <!-- load application -->
+    <script src="./js/app.js"></script>
+    <script src="./js/config.js"></script>
+
+    <!-- teas config -->
+    <script type="text/javascript" src="js/components/tea/tea.config.js"></script>
+    <script type="text/javascript" src="js/components/tea/tea.directive.js"></script>
+    <script type="text/javascript" src="js/components/tea/tea.controller.js"></script>
+    <script type="text/javascript" src="js/components/tea/tea.service.js"></script>
+  </body>
+</html>
